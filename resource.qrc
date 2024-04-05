@@ -1,0 +1,42 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</file>
+    <file>icon/Close.ico</file>
+    <file>icon/Close1.ico</file>
+    <file>icon/Dashboard Layout.ico</file>
+    <file>icon/Dashboard Layout1.ico</file>
+    <file>icon/Download from the Cloud.ico</file>
+    <file>icon/Download from the Cloud.png</file>
+    <file>icon/Download from the Cloud_1.ico</file>
+    <file>icon/Home.ico</file>
+    <file>icon/Home.png</file>
+    <file>icon/Home_1.ico</file>
+    <file>icon/Idea.ico</file>
+    <file>icon/Idea.png</file>
+    <file>icon/Idea_1.ico</file>
+    <file>icon/Info.ico</file>
+    <file>icon/Info.png</file>
+    <file>icon/Info_1.ico</file>
+    <file>icon/Menu.ico</file>
+    <file>icon/Name.ico</file>
+    <file>icon/Name1.ico</file>
+    <file>icon/Picture.ico</file>
+    <file>icon/Picture.png</file>
+    <file>icon/Picture_1.ico</file>
+    <file>icon/removebg.jpg</file>
+    <file>icon/Search.ico</file>
+    <file>icon/Search.png</file>
+    <file>icon/Search_1.ico</file>
+    <file>icon/Settings.ico</file>
+    <file>icon/Settings.png</file>
+    <file>icon/Settings_1.ico</file>
+    <file>icon/Speed.ico</file>
+    <file>icon/Speed1.ico</file>
+    <file>icon/Trash Can.ico</file>
+    <file>icon/Trash Can.png</file>
+    <file>icon/Trash Can_1.ico</file>
+    <file>icon/Upload to the Cloud.ico</file>
+    <file>icon/Upload to the Cloud.png</file>
+    <file>icon/Upload to the Cloud_1.ico</file>
+  </qresource>
+</RCC>
