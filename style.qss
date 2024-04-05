@@ -1,0 +1,14 @@
+QMainWindow {
+    background-color: #fff;
+}
+QStackedWidget {
+    background-color: #54833;
+}
+
+#widget_3, #widget_4 {
+    background-color: #021024;
+}
+
+QtWidgets{
+    background-color: navy;
+}

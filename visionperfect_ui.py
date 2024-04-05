@@ -269,7 +269,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         self.change_btn.toggled['bool'].connect(self.widget_3.setVisible) # type: ignore
         self.change_btn.toggled['bool'].connect(self.widget_4.setHidden) # type: ignore
         self.home_btn_1.toggled['bool'].connect(self.home_btn_2.setChecked) # type: ignore
