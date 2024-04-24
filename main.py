@@ -19,7 +19,8 @@ class MainWindow(QMainWindow):
         self.ui.gallery_btn_2.clicked.connect(self.show_gallery_page)
         self.ui.info_btn_1.clicked.connect(self.show_info_page)
         self.ui.info_btn_2.clicked.connect(self.show_info_page)
-
+        self.ui.btn_origbg.clicked.connect(self.show_originalbg)
+        self.ui.btn_resultbg.clicked.connect(self.show_resultbg)
         self.ui.pushButton_15.clicked.connect(self.select_image)
 
         # Hide widget_4 when the program starts
@@ -37,6 +38,11 @@ class MainWindow(QMainWindow):
 
     def show_info_page(self):
         self.ui.stackedWidget.setCurrentIndex(2)
+    def show_originalbg(self):
+        self.ui.stackedWidget_3.setCurrentIndex(1)
+    def show_resultbg(self):
+        self.ui.stackedWidget_3.setCurrentIndex(0)
+
 
     def select_image(self):
         file_dialog = QFileDialog()
@@ -44,11 +50,11 @@ class MainWindow(QMainWindow):
 
         if file_path:
             pixmap = QPixmap(file_path)
-            pixmap = pixmap.scaled(self.ui.show_image.size(), Qt.AspectRatioMode.IgnoreAspectRatio, Qt.TransformationMode.SmoothTransformation)
-            self.ui.show_image.setPixmap(pixmap)
-            self.ui.show_image.setScaledContents(True)
-            self.ui.show_image.adjustSize()
-            self.ui.pushButton_15.setText("Remove Bg")
+            pixmap = pixmap.scaled(self.ui.lbl_imgbg_result.size(), Qt.AspectRatioMode.IgnoreAspectRatio, Qt.TransformationMode.SmoothTransformation)
+            self.ui.lbl_imgbg_result.setPixmap(pixmap)
+            self.ui.lbl_imgbg_result.setScaledContents(True)
+            self.ui.lbl_imgbg_result.adjustSize()
+            self.ui.pushButton_15.hide()
 
 
 if __name__ == "__main__":
