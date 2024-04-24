@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
             self.ui.lbl_imgbg_result.setPixmap(pixmap)
             self.ui.lbl_imgbg_result.setScaledContents(True)
             self.ui.lbl_imgbg_result.adjustSize()
-            self.ui.pushButton_15.setText("Remove Bg")
+            self.ui.pushButton_15.hide()
 
 
 if __name__ == "__main__":
