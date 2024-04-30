@@ -6,92 +6,104 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1086</width>
-    <height>702</height>
+    <width>1089</width>
+    <height>759</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_8">
-    <item row="0" column="0">
-     <widget class="QPushButton" name="change_btn">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="resource.qrc">
-        <normaloff>:/icon/icon/Menu.ico</normaloff>:/icon/icon/Menu.ico</iconset>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QWidget" name="widget_2" native="true">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <widget class="QWidget" name="widget_3" native="true">
       <property name="maximumSize">
        <size>
-        <width>16777215</width>
-        <height>50</height>
+        <width>70</width>
+        <height>16777215</height>
        </size>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLineEdit" name="search_input">
-           <property name="placeholderText">
-            <string>Search...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="search_btn">
-           <property name="text">
-            <string>Search</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="0" column="0">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>306</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="3">
-        <widget class="QPushButton" name="pushButton_13">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="home_btn_1">
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="resource.qrc">
-           <normaloff>:/icon/icon/Name.ico</normaloff>:/icon/icon/Name.ico</iconset>
+           <normaloff>:/icon/icon/Home_1.ico</normaloff>
+           <normalon>:/icon/icon/Home.png</normalon>:/icon/icon/Home_1.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <spacer name="horizontalSpacer_2">
+       <item>
+        <widget class="QPushButton" name="gallery_btn_1">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icon/icon/Picture_1.ico</normaloff>
+           <normalon>:/icon/icon/Picture.png</normalon>:/icon/icon/Picture_1.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="info_btn_1">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icon/icon/Info_1.ico</normaloff>
+           <normalon>:/icon/icon/Info.ico</normalon>:/icon/icon/Info_1.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>306</width>
-           <height>20</height>
+           <width>20</width>
+           <height>465</height>
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exit_btn_1">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/icon/icon/Close1.ico</normaloff>:/icon/icon/Close1.ico</iconset>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -193,6 +205,30 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="change_btn">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icon/icon/Menu.ico</normaloff>:/icon/icon/Menu.ico</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="1" column="2">
@@ -345,86 +381,73 @@
            <attribute name="title">
             <string>Remove BG</string>
            </attribute>
-           <layout class="QGridLayout" name="gridLayout_10">
-            <item row="0" column="0" colspan="2">
-             <widget class="QLabel" name="label_7">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>15</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Remove Background</string>
-              </property>
-             </widget>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>15</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Remove Background</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>157</width>
+                  <height>17</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </item>
-            <item row="0" column="2">
-             <spacer name="horizontalSpacer_9">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>157</width>
-                <height>17</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="1" column="0" colspan="4">
+            <item row="1" column="0">
              <widget class="QStackedWidget" name="stackedWidget_3">
               <property name="frameShape">
                <enum>QFrame::NoFrame</enum>
               </property>
               <property name="currentIndex">
-               <number>1</number>
+               <number>2</number>
               </property>
               <widget class="QWidget" name="page_6">
-               <widget class="QLabel" name="lbl_origbg">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>10</y>
-                  <width>67</width>
-                  <height>17</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>RESULT</string>
-                </property>
-               </widget>
-               <widget class="QLabel" name="lbl_imgbg">
-                <property name="geometry">
-                 <rect>
-                  <x>20</x>
-                  <y>40</y>
-                  <width>491</width>
-                  <height>421</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>Image</string>
-                </property>
-               </widget>
+               <layout class="QGridLayout" name="gridLayout_8">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lbl_imgbg">
+                  <property name="text">
+                   <string>Image</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
               <widget class="QWidget" name="page_8">
                <layout class="QGridLayout" name="gridLayout_9">
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_11">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="textFormat">
                    <enum>Qt::PlainText</enum>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap resource="resource.qrc">:/icon/icon/bg_cover.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -437,99 +460,97 @@
                </layout>
               </widget>
               <widget class="QWidget" name="page_7">
-               <widget class="QLabel" name="lbl_resultbg">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>10</y>
-                  <width>67</width>
-                  <height>17</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>ORIGINAL</string>
-                </property>
-               </widget>
-               <widget class="QLabel" name="lbl_imgbg_result">
-                <property name="geometry">
-                 <rect>
-                  <x>20</x>
-                  <y>40</y>
-                  <width>451</width>
-                  <height>421</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>Image</string>
-                </property>
-               </widget>
+               <layout class="QGridLayout" name="gridLayout_10">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lbl_imgbg_result">
+                  <property name="text">
+                   <string>Image</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QPushButton" name="btn_origbg">
-              <property name="text">
-               <string>Original</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QPushButton" name="btn_origbg">
+                <property name="text">
+                 <string>Original</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_resultbg">
+                <property name="text">
+                 <string>Result</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_12">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>157</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_downloadbg">
+                <property name="text">
+                 <string>Download</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="btn_resultbg">
-              <property name="text">
-               <string>Result</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <spacer name="horizontalSpacer_12">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>157</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="2" column="3">
-             <widget class="QPushButton" name="btn_downloadbg">
-              <property name="text">
-               <string>Download</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0" colspan="4">
-             <layout class="QGridLayout" name="gridLayout">
-              <item row="0" column="0">
+            <item row="3" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QPushButton" name="btn_closebg">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/icon/Close1.ico</normaloff>:/icon/icon/Close1.ico</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
                <spacer name="horizontalSpacer_7">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>225</width>
+                  <width>118</width>
                   <height>20</height>
                  </size>
                 </property>
                </spacer>
               </item>
-              <item row="0" column="1">
+              <item>
                <widget class="QPushButton" name="pushButton_15">
                 <property name="text">
                  <string>Upload</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="2">
+              <item>
                <widget class="QPushButton" name="btn_rbg">
                 <property name="text">
                  <string>Remove BG</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="3">
+              <item>
                <spacer name="horizontalSpacer_8">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -761,99 +782,6 @@
         </property>
        </widget>
       </widget>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QWidget" name="widget_3" native="true">
-      <property name="maximumSize">
-       <size>
-        <width>70</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="home_btn_1">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icon/icon/Home_1.ico</normaloff>
-           <normalon>:/icon/icon/Home.png</normalon>:/icon/icon/Home_1.ico</iconset>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="gallery_btn_1">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icon/icon/Picture_1.ico</normaloff>
-           <normalon>:/icon/icon/Picture.png</normalon>:/icon/icon/Picture_1.ico</iconset>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="info_btn_1">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icon/icon/Info_1.ico</normaloff>
-           <normalon>:/icon/icon/Info.ico</normalon>:/icon/icon/Info_1.ico</iconset>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>465</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="exit_btn_1">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/icon/icon/Close1.ico</normaloff>:/icon/icon/Close1.ico</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
    </layout>

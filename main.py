@@ -70,21 +70,21 @@ class MainWindow(QMainWindow):
     def remove_background(self):
         if self.selected_file_path is None:
             return
-
+    
         with open(self.selected_file_path, "rb") as f:
             input_image = Image.open(f)
             output_image = rembg.remove(input_image)
-
+    
         # Create a new image with a transparent background
-        transparent_background = Image.new('RGBA', output_image.size, (0, 0, 0, 0))
-
+        transparent_background = Image.new('RGBA', input_image.size, (0, 0, 0, 0))
+    
         # Paste the output image onto the transparent background
         transparent_background.paste(output_image, mask=output_image)
-
+    
         # Convert the output image to a QPixmap
         output_pixmap = QPixmap.fromImage(QImage(transparent_background.tobytes(), transparent_background.size[0], transparent_background.size[1], QImage.Format_RGBA8888))
-        output_pixmap = output_pixmap.scaled(self.ui.lbl_imgbg.size(), Qt.AspectRatioMode.IgnoreAspectRatio, Qt.TransformationMode.SmoothTransformation)
-
+        output_pixmap = output_pixmap.scaled(self.ui.lbl_imgbg.size(), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation)
+    
         # Set the output image as the pixmap for lbl_imgbg
         self.ui.lbl_imgbg.setPixmap(output_pixmap)
         self.ui.lbl_imgbg.setScaledContents(True)
@@ -92,6 +92,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_downloadbg.show()
         self.ui.btn_origbg.show()
         self.ui.btn_resultbg.show()
+        self.ui.btn_rbg.hide()
         self.show_resultbg()
 
     def download_result_image(self):
