@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icon">
+    <file>icon/bg_cover.png</file>
     <file>icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</file>
     <file>icon/Close.ico</file>
     <file>icon/Close1.ico</file>
