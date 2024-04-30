@@ -243,22 +243,17 @@
           <item row="0" column="0">
            <widget class="QWidget" name="widget" native="true">
             <layout class="QGridLayout" name="gridLayout_5">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Vision GPT</string>
-               </property>
-              </widget>
-             </item>
              <item row="0" column="1" rowspan="2" colspan="2">
               <widget class="QLabel" name="label_2">
                <property name="text">
                 <string>Image</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>TextLabel</string>
                </property>
               </widget>
              </item>
@@ -275,14 +270,19 @@
                </property>
               </spacer>
              </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
                <property name="text">
-                <string>TextLabel</string>
+                <string>Vision GPT</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
+             <item row="3" column="1">
               <spacer name="horizontalSpacer_5">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
@@ -295,7 +295,7 @@
                </property>
               </spacer>
              </item>
-             <item row="2" column="2">
+             <item row="3" column="2">
               <widget class="QPushButton" name="pushButton_11">
                <property name="text">
                 <string>Send</string>
@@ -308,34 +308,7 @@
           <item row="1" column="0">
            <widget class="QWidget" name="widget_5" native="true">
             <layout class="QGridLayout" name="gridLayout_6">
-             <item row="1" column="0">
-              <spacer name="verticalSpacer_4">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>207</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="2">
-              <widget class="QPushButton" name="pushButton_14">
-               <property name="text">
-                <string>Send</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
+             <item row="3" column="1">
               <spacer name="horizontalSpacer_6">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
@@ -347,6 +320,20 @@
                 </size>
                </property>
               </spacer>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QPushButton" name="pushButton_14">
+               <property name="text">
+                <string>Send</string>
+               </property>
+              </widget>
              </item>
              <item row="0" column="0">
               <widget class="QLabel" name="label_4">
@@ -360,12 +347,8 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="1" rowspan="2" colspan="2">
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>Chat</string>
-               </property>
-              </widget>
+             <item row="2" column="0" colspan="3">
+              <widget class="QTableWidget" name="tableWidget"/>
              </item>
             </layout>
            </widget>
@@ -423,7 +406,7 @@
                <enum>QFrame::NoFrame</enum>
               </property>
               <property name="currentIndex">
-               <number>2</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="page_6">
                <layout class="QGridLayout" name="gridLayout_8">
@@ -438,7 +421,7 @@
               </widget>
               <widget class="QWidget" name="page_8">
                <layout class="QGridLayout" name="gridLayout_9">
-                <item row="0" column="0">
+                <item row="0" column="1">
                  <widget class="QLabel" name="label_11">
                   <property name="enabled">
                    <bool>true</bool>
@@ -474,6 +457,35 @@
             </item>
             <item row="2" column="0">
              <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QComboBox" name="comboBox">
+                <item>
+                 <property name="text">
+                  <string>Transparent</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>White</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Black</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Red</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Choose file</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
               <item>
                <widget class="QPushButton" name="btn_origbg">
                 <property name="text">
