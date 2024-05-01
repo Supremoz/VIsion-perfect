@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         self.ui.pushButton_15.clicked.connect(self.select_image)
         self.selected_file_path = None
         self.ui.btn_downloadbg.clicked.connect(self.download_result_image)
-
+        self.ui.btn_closebg.clicked.connect(self.show_introbg)
         # Hide btn when the program starts
         self.ui.widget_4.hide()
         self.ui.btn_rbg.hide()
@@ -33,6 +33,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_downloadbg.hide()
         self.ui.btn_resultbg.hide()
         self.ui.comboBox.hide()
+        self.ui.btn_closebg.hide()
         # Connect exit_btn_1 and exit_btn_2 to close the program
         self.ui.exit_btn_1.clicked.connect(QApplication.instance().quit)
         self.ui.exit_btn_2.clicked.connect(QApplication.instance().quit)
@@ -51,7 +52,15 @@ class MainWindow(QMainWindow):
 
     def show_resultbg(self):
         self.ui.stackedWidget_3.setCurrentIndex(0)
-
+    def show_introbg(self):
+        self.ui.stackedWidget_3.setCurrentIndex(1)
+        self.ui.btn_closebg.show()
+        self.ui.pushButton_15.show()
+        self.ui.btn_rbg.hide()
+        self.ui.comboBox.hide()
+        self.ui.btn_downloadbg.hide()
+        self.ui.btn_origbg.hide()
+        self.ui.btn_resultbg.hide()
     def select_image(self):
         file_dialog = QFileDialog()
         file_path, _ = file_dialog.getOpenFileName(self, "Select Image", "", "Image Files (*.png *.jpg *.jpeg)")
@@ -64,6 +73,7 @@ class MainWindow(QMainWindow):
             self.ui.lbl_imgbg_result.setScaledContents(True)
             self.ui.lbl_imgbg_result.adjustSize()
             self.ui.pushButton_15.hide()
+            self.ui.btn_closebg.show()
             self.ui.btn_rbg.show()
             self.ui.btn_rbg.clicked.connect(self.remove_background)
             self.show_originalbg()
@@ -109,7 +119,7 @@ class MainWindow(QMainWindow):
             output_image.save(file_name)
 
             # Show a message box to confirm the save
-            QMessageBox.information(self, "Image Saved",f"Image saved as {file_name}")
+            #QMessageBox.information(self, "Image Saved",f"Image saved as {file_name}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -2,7 +2,7 @@ QMainWindow {
     background-color: #052659;
 }
 QStackedWidget {
-    background-color: #54833;
+    background-color: #054833;
 }
 
 #widget_3, #widget_4{
