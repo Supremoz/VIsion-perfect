@@ -1,21 +1,30 @@
 QMainWindow {
-    background-color: #052659;
+    background-color: #58534E;
 }
 QStackedWidget {
-    background-color: #054833;
+    background-color: #B9B8B6;
 }
 
 #widget_3, #widget_4{
-    background-color: #052659;
+    background-color: #58534E;
 }
 #label_2, #label_5{
-    background-color: #C1E8FF
+    background-color: #DAD698;
 }
 
  #widget_5, #widget, #tabWidget{
-    background-color: #7DA0CA;
+    background-color: #DAD6D8;
 }
 
 QtWidgets {
-    background-color: navy;
+    background-color: #282623;
+}
+#stackedWidget_3 {
+    background-color: white;
+}
+#label_4, #label, #label_7{
+    color: white;
+}
+#tabWidget {
+    color: white;
 }

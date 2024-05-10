@@ -6,15 +6,48 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1089</width>
+    <width>1081</width>
     <height>759</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/icon/icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</normaloff>:/icon/icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #282623;
+}
+
+QPushButton{
+	background-color: white;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="change_btn">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icon/icon/Menu.ico</normaloff>:/icon/icon/Menu.ico</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="0">
      <widget class="QWidget" name="widget_3" native="true">
       <property name="maximumSize">
@@ -106,6 +139,16 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="3">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
      </widget>
     </item>
     <item row="1" column="1">
@@ -207,30 +250,6 @@
       </layout>
      </widget>
     </item>
-    <item row="0" column="1" colspan="2">
-     <widget class="QWidget" name="widget_2" native="true">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>50</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="change_btn">
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="resource.qrc">
-        <normaloff>:/icon/icon/Menu.ico</normaloff>:/icon/icon/Menu.ico</iconset>
-      </property>
-      <property name="checkable">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="2">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
@@ -242,9 +261,26 @@
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
            <widget class="QWidget" name="widget" native="true">
+            <property name="styleSheet">
+             <string notr="true">QWidget {
+    background-color: #DAD9D8;
+}
+
+QPushButton{
+	background-color: white;
+}
+</string>
+            </property>
             <layout class="QGridLayout" name="gridLayout_5">
              <item row="0" column="1" rowspan="2" colspan="2">
               <widget class="QLabel" name="label_2">
+               <property name="styleSheet">
+                <string notr="true">
+QLabel {
+    background-color: #58534E;
+	color: white;
+}</string>
+               </property>
                <property name="text">
                 <string>Image</string>
                </property>
@@ -307,6 +343,23 @@
           </item>
           <item row="1" column="0">
            <widget class="QWidget" name="widget_5" native="true">
+            <property name="styleSheet">
+             <string notr="true">QWidget {
+    background-color: #DAD9D8;
+}
+
+QPushButton{
+	background-color: white;
+}
+
+QTableWidget{
+    background-color: #58534E;
+}
+
+
+
+</string>
+            </property>
             <layout class="QGridLayout" name="gridLayout_6">
              <item row="3" column="1">
               <spacer name="horizontalSpacer_6">
@@ -348,7 +401,11 @@
               </widget>
              </item>
              <item row="2" column="0" colspan="3">
-              <widget class="QTableWidget" name="tableWidget"/>
+              <widget class="QTableWidget" name="tableWidget">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -357,10 +414,28 @@
         </item>
         <item row="0" column="1">
          <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">QWidget {
+    background-color: #DAD9D8;
+}
+
+QPushButton{
+	background-color: white;
+}
+
+QComboBox{
+	background-color: white;
+}
+
+</string>
+          </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <attribute name="title">
             <string>Remove BG</string>
            </attribute>
@@ -412,6 +487,13 @@
                <layout class="QGridLayout" name="gridLayout_8">
                 <item row="0" column="0">
                  <widget class="QLabel" name="lbl_imgbg">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    background-color: #58534e;
+	color: white;
+}
+</string>
+                  </property>
                   <property name="text">
                    <string>Image</string>
                   </property>
@@ -425,6 +507,13 @@
                  <widget class="QLabel" name="label_11">
                   <property name="enabled">
                    <bool>true</bool>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
                   </property>
                   <property name="text">
                    <string/>
@@ -446,6 +535,13 @@
                <layout class="QGridLayout" name="gridLayout_10">
                 <item row="0" column="0">
                  <widget class="QLabel" name="lbl_imgbg_result">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+                  </property>
                   <property name="text">
                    <string>Image</string>
                   </property>
@@ -526,6 +622,9 @@
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
                <widget class="QPushButton" name="btn_closebg">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -584,13 +683,6 @@
             <string>Enhance Image</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_4">
-            <item row="2" column="1">
-             <widget class="QPushButton" name="btn_resen">
-              <property name="text">
-               <string>Result</string>
-              </property>
-             </widget>
-            </item>
             <item row="0" column="0" colspan="2">
              <widget class="QLabel" name="label_10">
               <property name="maximumSize">
@@ -622,10 +714,125 @@
               </property>
              </spacer>
             </item>
+            <item row="3" column="2">
+             <widget class="QPushButton" name="btn_uploaden">
+              <property name="maximumSize">
+               <size>
+                <width>110</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>ENHANCE</string>
+              </property>
+             </widget>
+            </item>
             <item row="2" column="4">
              <widget class="QPushButton" name="btn_downloaden">
               <property name="text">
                <string>Download</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3" colspan="2">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>108</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="0" colspan="5">
+             <widget class="QStackedWidget" name="stackedWidget_2">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="currentIndex">
+               <number>1</number>
+              </property>
+              <widget class="QWidget" name="page_4">
+               <layout class="QGridLayout" name="gridLayout_11">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lbl_original">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>RESULT</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lbl_imgen">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Image</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="page_5">
+               <layout class="QGridLayout" name="gridLayout_12">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lbl_original_result">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>ORIGINAL</string>
+                  </property>
+                  <property name="indent">
+                   <number>1</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lbl_imgen_result">
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Image</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="btn_origen">
+              <property name="text">
+               <string>Original</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="btn_resen">
+              <property name="text">
+               <string>Result</string>
               </property>
              </widget>
             </item>
@@ -642,73 +849,7 @@
               </property>
              </spacer>
             </item>
-            <item row="1" column="0" colspan="5">
-             <widget class="QStackedWidget" name="stackedWidget_2">
-              <property name="currentIndex">
-               <number>1</number>
-              </property>
-              <widget class="QWidget" name="page_4">
-               <widget class="QLabel" name="lbl_original">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>10</y>
-                  <width>81</width>
-                  <height>21</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>RESULT</string>
-                </property>
-               </widget>
-               <widget class="QLabel" name="lbl_imgen">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>30</y>
-                  <width>411</width>
-                  <height>431</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>Image</string>
-                </property>
-               </widget>
-              </widget>
-              <widget class="QWidget" name="page_5">
-               <widget class="QLabel" name="lbl_imgen_result">
-                <property name="geometry">
-                 <rect>
-                  <x>9</x>
-                  <y>31</y>
-                  <width>411</width>
-                  <height>431</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>Image</string>
-                </property>
-               </widget>
-               <widget class="QLabel" name="lbl_original_result">
-                <property name="geometry">
-                 <rect>
-                  <x>9</x>
-                  <y>11</y>
-                  <width>81</width>
-                  <height>21</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>ORIGINAL</string>
-                </property>
-                <property name="indent">
-                 <number>1</number>
-                </property>
-               </widget>
-              </widget>
-             </widget>
-            </item>
-            <item row="3" column="0" colspan="2">
+            <item row="3" column="0">
              <spacer name="horizontalSpacer_3">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -721,32 +862,12 @@
               </property>
              </spacer>
             </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="btn_origen">
-              <property name="text">
-               <string>Original</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="2">
-             <widget class="QPushButton" name="btn_uploaden">
+            <item row="3" column="1">
+             <widget class="QPushButton" name="pushButton">
               <property name="text">
                <string>UPLOAD</string>
               </property>
              </widget>
-            </item>
-            <item row="3" column="3" colspan="2">
-             <spacer name="horizontalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>108</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
            </layout>
           </widget>
@@ -775,24 +896,305 @@
        </widget>
       </widget>
       <widget class="QWidget" name="page_3">
-       <widget class="QLabel" name="label_9">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>151</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>18</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>About Us</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <item>
+         <widget class="QWidget" name="widget_6" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QScrollArea" name="scrollArea_2">
+             <property name="minimumSize">
+              <size>
+               <width>400</width>
+               <height>450</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget{
+	background-color: white;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::WinPanel</enum>
+             </property>
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>874</width>
+                <height>1155</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
+                <number>9</number>
+               </property>
+               <item>
+                <widget class="QTextEdit" name="textEdit_6">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit{
+	background-color:#58534E;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#ffffff;&quot;&gt;About Us&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="textEdit_7">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit{
+	background-color: #DAD9D8;
+	border:none;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="lineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Welcome To Vision Perfect!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QTextEdit" name="textEdit_8">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>425</width>
+                     <height>425</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QTextEdit{
+	background-color:#58534E;
+	color: white;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="html">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;A user-friendly application developed by a team of computer engineering students from CTU-Main Campus. Our app analyzes your photos and applies adjustments automatically to enhance their quality. From reducing noise to adjusting contrast and brightness, Vision Perfect ensures your images look their best without requiring manual intervention. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>425</width>
+                     <height>425</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../../VIsion-perfect/resource.qrc">:/icon/icon/vp.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                   <property name="indent">
+                    <number>-1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QTextEdit" name="textEdit_9">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>425</width>
+                     <height>425</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QTextEdit {
+    background-color: #DAD9D8;
+}
+
+</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="lineWrapMode">
+                    <enum>QTextEdit::WidgetWidth</enum>
+                   </property>
+                   <property name="lineWrapColumnOrWidth">
+                    <number>0</number>
+                   </property>
+                   <property name="html">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; color:#000000;&quot;&gt;In addition to image enhancement, Vision Perfect also offers a background removal feature powered by AI algorithms. This feature allows you to effortlessly isolate subjects from their backgrounds, opening up a world of creative possibilities for your projects.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_15">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>425</width>
+                     <height>425</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../../VIsion-perfect/resource.qrc">:/icon/icon/ai.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="textEdit_10">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>53</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit{
+	background-color:#58534E;
+}</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;Email: lindon.matarong@ctu.edu.ph | rhea.paraiso@ctu.edu.ph |  kayealiyah.sermon@ctu.edu.ph&lt;br /&gt;Address: M.J. Cuenco Ave, C‎or R. Palma Street, 6000 Cebu&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;Group 7 © 2024&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -801,6 +1203,7 @@
  </widget>
  <resources>
   <include location="resource.qrc"/>
+  <include location="../../VIsion-perfect/resource.qrc"/>
  </resources>
  <connections>
   <connection>

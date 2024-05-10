@@ -14,11 +14,34 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1089, 759)
+        MainWindow.resize(1081, 759)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icon/icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setStyleSheet("QWidget {\n"
+"    background-color: #282623;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"    background-color: white;\n"
+"}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_2.setObjectName("gridLayout_2")
+        self.change_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.change_btn.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icon/icon/Menu.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.change_btn.setIcon(icon1)
+        self.change_btn.setCheckable(True)
+        self.change_btn.setObjectName("change_btn")
+        self.gridLayout_2.addWidget(self.change_btn, 0, 0, 1, 1)
         self.widget_3 = QtWidgets.QWidget(self.centralwidget)
         self.widget_3.setMaximumSize(QtCore.QSize(70, 16777215))
         self.widget_3.setObjectName("widget_3")
@@ -27,30 +50,30 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.home_btn_1 = QtWidgets.QPushButton(self.widget_3)
         self.home_btn_1.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icon/icon/Home_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap(":/icon/icon/Home.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.home_btn_1.setIcon(icon)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icon/icon/Home_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(":/icon/icon/Home.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.home_btn_1.setIcon(icon2)
         self.home_btn_1.setCheckable(True)
         self.home_btn_1.setAutoExclusive(True)
         self.home_btn_1.setObjectName("home_btn_1")
         self.verticalLayout.addWidget(self.home_btn_1)
         self.gallery_btn_1 = QtWidgets.QPushButton(self.widget_3)
         self.gallery_btn_1.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icon/icon/Picture_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon1.addPixmap(QtGui.QPixmap(":/icon/icon/Picture.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.gallery_btn_1.setIcon(icon1)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icon/icon/Picture_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/icon/icon/Picture.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.gallery_btn_1.setIcon(icon3)
         self.gallery_btn_1.setCheckable(True)
         self.gallery_btn_1.setAutoExclusive(True)
         self.gallery_btn_1.setObjectName("gallery_btn_1")
         self.verticalLayout.addWidget(self.gallery_btn_1)
         self.info_btn_1 = QtWidgets.QPushButton(self.widget_3)
         self.info_btn_1.setText("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/icon/icon/Info_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon2.addPixmap(QtGui.QPixmap(":/icon/icon/Info.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.info_btn_1.setIcon(icon2)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/Info_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/Info.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.info_btn_1.setIcon(icon4)
         self.info_btn_1.setCheckable(True)
         self.info_btn_1.setAutoExclusive(True)
         self.info_btn_1.setObjectName("info_btn_1")
@@ -59,12 +82,16 @@ class Ui_MainWindow(object):
         self.verticalLayout.addItem(spacerItem)
         self.exit_btn_1 = QtWidgets.QPushButton(self.widget_3)
         self.exit_btn_1.setText("")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icon/icon/Close1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.exit_btn_1.setIcon(icon3)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icon/icon/Close1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.exit_btn_1.setIcon(icon5)
         self.exit_btn_1.setObjectName("exit_btn_1")
         self.verticalLayout.addWidget(self.exit_btn_1)
         self.gridLayout_2.addWidget(self.widget_3, 1, 0, 1, 1)
+        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
+        self.widget_2.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.widget_2.setObjectName("widget_2")
+        self.gridLayout_2.addWidget(self.widget_2, 0, 1, 1, 3)
         self.widget_4 = QtWidgets.QWidget(self.centralwidget)
         self.widget_4.setObjectName("widget_4")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_4)
@@ -72,25 +99,25 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setSpacing(4)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.home_btn_2 = QtWidgets.QPushButton(self.widget_4)
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/Home_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/Home.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.home_btn_2.setIcon(icon4)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/icon/icon/Home_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(":/icon/icon/Home.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.home_btn_2.setIcon(icon6)
         self.home_btn_2.setCheckable(True)
         self.home_btn_2.setAutoExclusive(True)
         self.home_btn_2.setObjectName("home_btn_2")
         self.verticalLayout_2.addWidget(self.home_btn_2)
         self.gallery_btn_2 = QtWidgets.QPushButton(self.widget_4)
-        self.gallery_btn_2.setIcon(icon1)
+        self.gallery_btn_2.setIcon(icon3)
         self.gallery_btn_2.setCheckable(True)
         self.gallery_btn_2.setAutoExclusive(True)
         self.gallery_btn_2.setObjectName("gallery_btn_2")
         self.verticalLayout_2.addWidget(self.gallery_btn_2)
         self.info_btn_2 = QtWidgets.QPushButton(self.widget_4)
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/icon/icon/Info_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon5.addPixmap(QtGui.QPixmap(":/icon/icon/Info.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.info_btn_2.setIcon(icon5)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/icon/icon/Info_1.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(":/icon/icon/Info.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.info_btn_2.setIcon(icon7)
         self.info_btn_2.setCheckable(True)
         self.info_btn_2.setAutoExclusive(True)
         self.info_btn_2.setObjectName("info_btn_2")
@@ -99,22 +126,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addItem(spacerItem1)
         self.exit_btn_2 = QtWidgets.QPushButton(self.widget_4)
         self.exit_btn_2.setText("")
-        self.exit_btn_2.setIcon(icon3)
+        self.exit_btn_2.setIcon(icon5)
         self.exit_btn_2.setObjectName("exit_btn_2")
         self.verticalLayout_2.addWidget(self.exit_btn_2)
         self.gridLayout_2.addWidget(self.widget_4, 1, 1, 1, 1)
-        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_2.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.widget_2.setObjectName("widget_2")
-        self.gridLayout_2.addWidget(self.widget_2, 0, 1, 1, 2)
-        self.change_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.change_btn.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icon/icon/Menu.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.change_btn.setIcon(icon6)
-        self.change_btn.setCheckable(True)
-        self.change_btn.setObjectName("change_btn")
-        self.gridLayout_2.addWidget(self.change_btn, 0, 0, 1, 1)
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
@@ -124,10 +139,23 @@ class Ui_MainWindow(object):
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.widget = QtWidgets.QWidget(self.page)
+        self.widget.setStyleSheet("QWidget {\n"
+"    background-color: #DAD9D8;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"    background-color: white;\n"
+"}\n"
+"")
         self.widget.setObjectName("widget")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.widget)
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.label_2 = QtWidgets.QLabel(self.widget)
+        self.label_2.setStyleSheet("\n"
+"QLabel {\n"
+"    background-color: #58534E;\n"
+"    color: white;\n"
+"}")
         self.label_2.setObjectName("label_2")
         self.gridLayout_5.addWidget(self.label_2, 0, 1, 2, 2)
         self.label_3 = QtWidgets.QLabel(self.widget)
@@ -148,6 +176,21 @@ class Ui_MainWindow(object):
         self.gridLayout_5.addWidget(self.pushButton_11, 3, 2, 1, 1)
         self.gridLayout_3.addWidget(self.widget, 0, 0, 1, 1)
         self.widget_5 = QtWidgets.QWidget(self.page)
+        self.widget_5.setStyleSheet("QWidget {\n"
+"    background-color: #DAD9D8;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QTableWidget{\n"
+"    background-color: #58534E;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
         self.widget_5.setObjectName("widget_5")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.widget_5)
         self.gridLayout_6.setObjectName("gridLayout_6")
@@ -166,6 +209,7 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.gridLayout_6.addWidget(self.label_4, 0, 0, 1, 1)
         self.tableWidget = QtWidgets.QTableWidget(self.widget_5)
+        self.tableWidget.setStyleSheet("")
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
@@ -173,8 +217,22 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.widget_5, 1, 0, 1, 1)
         self.gridLayout_7.addLayout(self.gridLayout_3, 0, 0, 1, 1)
         self.tabWidget = QtWidgets.QTabWidget(self.page)
+        self.tabWidget.setStyleSheet("QWidget {\n"
+"    background-color: #DAD9D8;\n"
+"}\n"
+"\n"
+"QPushButton{\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QComboBox{\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"")
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
+        self.tab.setStyleSheet("")
         self.tab.setObjectName("tab")
         self.gridLayout = QtWidgets.QGridLayout(self.tab)
         self.gridLayout.setObjectName("gridLayout")
@@ -198,6 +256,11 @@ class Ui_MainWindow(object):
         self.gridLayout_8 = QtWidgets.QGridLayout(self.page_6)
         self.gridLayout_8.setObjectName("gridLayout_8")
         self.lbl_imgbg = QtWidgets.QLabel(self.page_6)
+        self.lbl_imgbg.setStyleSheet("QLabel{\n"
+"    background-color: #58534e;\n"
+"    color: white;\n"
+"}\n"
+"")
         self.lbl_imgbg.setObjectName("lbl_imgbg")
         self.gridLayout_8.addWidget(self.lbl_imgbg, 0, 0, 1, 1)
         self.stackedWidget_3.addWidget(self.page_6)
@@ -207,6 +270,11 @@ class Ui_MainWindow(object):
         self.gridLayout_9.setObjectName("gridLayout_9")
         self.label_11 = QtWidgets.QLabel(self.page_8)
         self.label_11.setEnabled(True)
+        self.label_11.setStyleSheet("QLabel{\n"
+"    background-color: #58534E;\n"
+"    color: white;\n"
+"}\n"
+"")
         self.label_11.setText("")
         self.label_11.setTextFormat(QtCore.Qt.PlainText)
         self.label_11.setScaledContents(True)
@@ -219,6 +287,11 @@ class Ui_MainWindow(object):
         self.gridLayout_10 = QtWidgets.QGridLayout(self.page_7)
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.lbl_imgbg_result = QtWidgets.QLabel(self.page_7)
+        self.lbl_imgbg_result.setStyleSheet("QLabel{\n"
+"    background-color: #58534E;\n"
+"    color: white;\n"
+"}\n"
+"")
         self.lbl_imgbg_result.setObjectName("lbl_imgbg_result")
         self.gridLayout_10.addWidget(self.lbl_imgbg_result, 0, 0, 1, 1)
         self.stackedWidget_3.addWidget(self.page_7)
@@ -248,8 +321,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.btn_closebg = QtWidgets.QPushButton(self.tab)
+        self.btn_closebg.setStyleSheet("")
         self.btn_closebg.setText("")
-        self.btn_closebg.setIcon(icon3)
+        self.btn_closebg.setIcon(icon5)
         self.btn_closebg.setObjectName("btn_closebg")
         self.horizontalLayout_2.addWidget(self.btn_closebg)
         spacerItem7 = QtWidgets.QSpacerItem(118, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -268,9 +342,6 @@ class Ui_MainWindow(object):
         self.tab_2.setObjectName("tab_2")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.tab_2)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        self.btn_resen = QtWidgets.QPushButton(self.tab_2)
-        self.btn_resen.setObjectName("btn_resen")
-        self.gridLayout_4.addWidget(self.btn_resen, 2, 1, 1, 1)
         self.label_10 = QtWidgets.QLabel(self.tab_2)
         self.label_10.setMaximumSize(QtCore.QSize(16777215, 40))
         font = QtGui.QFont()
@@ -280,43 +351,67 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addWidget(self.label_10, 0, 0, 1, 2)
         spacerItem9 = QtWidgets.QSpacerItem(108, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_4.addItem(spacerItem9, 0, 2, 1, 1)
+        self.btn_uploaden = QtWidgets.QPushButton(self.tab_2)
+        self.btn_uploaden.setMaximumSize(QtCore.QSize(110, 16777215))
+        self.btn_uploaden.setObjectName("btn_uploaden")
+        self.gridLayout_4.addWidget(self.btn_uploaden, 3, 2, 1, 1)
         self.btn_downloaden = QtWidgets.QPushButton(self.tab_2)
         self.btn_downloaden.setObjectName("btn_downloaden")
         self.gridLayout_4.addWidget(self.btn_downloaden, 2, 4, 1, 1)
-        spacerItem10 = QtWidgets.QSpacerItem(216, 22, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem10, 2, 2, 1, 2)
+        spacerItem10 = QtWidgets.QSpacerItem(108, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem10, 3, 3, 1, 2)
         self.stackedWidget_2 = QtWidgets.QStackedWidget(self.tab_2)
+        self.stackedWidget_2.setStyleSheet("")
         self.stackedWidget_2.setObjectName("stackedWidget_2")
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
+        self.gridLayout_11 = QtWidgets.QGridLayout(self.page_4)
+        self.gridLayout_11.setObjectName("gridLayout_11")
         self.lbl_original = QtWidgets.QLabel(self.page_4)
-        self.lbl_original.setGeometry(QtCore.QRect(10, 10, 81, 21))
+        self.lbl_original.setMaximumSize(QtCore.QSize(16777215, 10))
         self.lbl_original.setObjectName("lbl_original")
+        self.gridLayout_11.addWidget(self.lbl_original, 0, 0, 1, 1)
         self.lbl_imgen = QtWidgets.QLabel(self.page_4)
-        self.lbl_imgen.setGeometry(QtCore.QRect(10, 30, 411, 431))
+        self.lbl_imgen.setStyleSheet("QLabel{\n"
+"    background-color: #58534E;\n"
+"    color: white;\n"
+"}\n"
+"")
         self.lbl_imgen.setObjectName("lbl_imgen")
+        self.gridLayout_11.addWidget(self.lbl_imgen, 1, 0, 1, 1)
         self.stackedWidget_2.addWidget(self.page_4)
         self.page_5 = QtWidgets.QWidget()
         self.page_5.setObjectName("page_5")
-        self.lbl_imgen_result = QtWidgets.QLabel(self.page_5)
-        self.lbl_imgen_result.setGeometry(QtCore.QRect(9, 31, 411, 431))
-        self.lbl_imgen_result.setObjectName("lbl_imgen_result")
+        self.gridLayout_12 = QtWidgets.QGridLayout(self.page_5)
+        self.gridLayout_12.setObjectName("gridLayout_12")
         self.lbl_original_result = QtWidgets.QLabel(self.page_5)
-        self.lbl_original_result.setGeometry(QtCore.QRect(9, 11, 81, 21))
+        self.lbl_original_result.setMaximumSize(QtCore.QSize(16777215, 10))
         self.lbl_original_result.setIndent(1)
         self.lbl_original_result.setObjectName("lbl_original_result")
+        self.gridLayout_12.addWidget(self.lbl_original_result, 0, 0, 1, 1)
+        self.lbl_imgen_result = QtWidgets.QLabel(self.page_5)
+        self.lbl_imgen_result.setStyleSheet("QLabel{\n"
+"    background-color: #58534E;\n"
+"    color: white;\n"
+"}\n"
+"")
+        self.lbl_imgen_result.setObjectName("lbl_imgen_result")
+        self.gridLayout_12.addWidget(self.lbl_imgen_result, 1, 0, 1, 1)
         self.stackedWidget_2.addWidget(self.page_5)
         self.gridLayout_4.addWidget(self.stackedWidget_2, 1, 0, 1, 5)
-        spacerItem11 = QtWidgets.QSpacerItem(162, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem11, 3, 0, 1, 2)
         self.btn_origen = QtWidgets.QPushButton(self.tab_2)
         self.btn_origen.setObjectName("btn_origen")
         self.gridLayout_4.addWidget(self.btn_origen, 2, 0, 1, 1)
-        self.btn_uploaden = QtWidgets.QPushButton(self.tab_2)
-        self.btn_uploaden.setObjectName("btn_uploaden")
-        self.gridLayout_4.addWidget(self.btn_uploaden, 3, 2, 1, 1)
-        spacerItem12 = QtWidgets.QSpacerItem(108, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_4.addItem(spacerItem12, 3, 3, 1, 2)
+        self.btn_resen = QtWidgets.QPushButton(self.tab_2)
+        self.btn_resen.setObjectName("btn_resen")
+        self.gridLayout_4.addWidget(self.btn_resen, 2, 1, 1, 1)
+        spacerItem11 = QtWidgets.QSpacerItem(216, 22, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem11, 2, 2, 1, 2)
+        spacerItem12 = QtWidgets.QSpacerItem(162, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_4.addItem(spacerItem12, 3, 0, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(self.tab_2)
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout_4.addWidget(self.pushButton, 3, 1, 1, 1)
         self.tabWidget.addTab(self.tab_2, "")
         self.gridLayout_7.addWidget(self.tabWidget, 0, 1, 1, 1)
         self.stackedWidget.addWidget(self.page)
@@ -331,19 +426,135 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
-        self.label_9 = QtWidgets.QLabel(self.page_3)
-        self.label_9.setGeometry(QtCore.QRect(10, 10, 151, 41))
-        font = QtGui.QFont()
-        font.setPointSize(18)
-        self.label_9.setFont(font)
-        self.label_9.setObjectName("label_9")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.page_3)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.widget_6 = QtWidgets.QWidget(self.page_3)
+        self.widget_6.setObjectName("widget_6")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.widget_6)
+        self.horizontalLayout_7.setSpacing(6)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.scrollArea_2 = QtWidgets.QScrollArea(self.widget_6)
+        self.scrollArea_2.setMinimumSize(QtCore.QSize(400, 450))
+        self.scrollArea_2.setStyleSheet("QWidget{\n"
+"    background-color: white;\n"
+"}")
+        self.scrollArea_2.setFrameShape(QtWidgets.QFrame.WinPanel)
+        self.scrollArea_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOn)
+        self.scrollArea_2.setWidgetResizable(True)
+        self.scrollArea_2.setObjectName("scrollArea_2")
+        self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 874, 1155))
+        self.scrollAreaWidgetContents_2.setStyleSheet("")
+        self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
+        self.verticalLayout_4.setSpacing(9)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.textEdit_6 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_2)
+        self.textEdit_6.setMinimumSize(QtCore.QSize(0, 150))
+        self.textEdit_6.setStyleSheet("QTextEdit{\n"
+"    background-color:#58534E;\n"
+"}")
+        self.textEdit_6.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textEdit_6.setObjectName("textEdit_6")
+        self.verticalLayout_4.addWidget(self.textEdit_6)
+        self.textEdit_7 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_2)
+        self.textEdit_7.setMinimumSize(QtCore.QSize(0, 40))
+        self.textEdit_7.setAutoFillBackground(False)
+        self.textEdit_7.setStyleSheet("QTextEdit{\n"
+"    background-color: #DAD9D8;\n"
+"    border:none;\n"
+"}")
+        self.textEdit_7.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textEdit_7.setLineWidth(0)
+        self.textEdit_7.setObjectName("textEdit_7")
+        self.verticalLayout_4.addWidget(self.textEdit_7)
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_8.setSpacing(0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.textEdit_8 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit_8.sizePolicy().hasHeightForWidth())
+        self.textEdit_8.setSizePolicy(sizePolicy)
+        self.textEdit_8.setMinimumSize(QtCore.QSize(425, 425))
+        self.textEdit_8.setStyleSheet("QTextEdit{\n"
+"    background-color:#58534E;\n"
+"    color: white;\n"
+"}")
+        self.textEdit_8.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textEdit_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.textEdit_8.setObjectName("textEdit_8")
+        self.horizontalLayout_8.addWidget(self.textEdit_8)
+        self.label_13 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
+        self.label_13.setSizePolicy(sizePolicy)
+        self.label_13.setMinimumSize(QtCore.QSize(425, 425))
+        self.label_13.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.label_13.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.label_13.setText("")
+        self.label_13.setPixmap(QtGui.QPixmap(":/icon/icon/vp.png"))
+        self.label_13.setScaledContents(True)
+        self.label_13.setIndent(-1)
+        self.label_13.setObjectName("label_13")
+        self.horizontalLayout_8.addWidget(self.label_13)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_8)
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_9.setSpacing(0)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.textEdit_9 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit_9.sizePolicy().hasHeightForWidth())
+        self.textEdit_9.setSizePolicy(sizePolicy)
+        self.textEdit_9.setMinimumSize(QtCore.QSize(425, 425))
+        self.textEdit_9.setStyleSheet("QTextEdit {\n"
+"    background-color: #DAD9D8;\n"
+"}\n"
+"\n"
+"")
+        self.textEdit_9.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textEdit_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.textEdit_9.setLineWrapMode(QtWidgets.QTextEdit.WidgetWidth)
+        self.textEdit_9.setLineWrapColumnOrWidth(0)
+        self.textEdit_9.setObjectName("textEdit_9")
+        self.horizontalLayout_9.addWidget(self.textEdit_9)
+        self.label_15 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_15.sizePolicy().hasHeightForWidth())
+        self.label_15.setSizePolicy(sizePolicy)
+        self.label_15.setMinimumSize(QtCore.QSize(425, 425))
+        self.label_15.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.label_15.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.label_15.setText("")
+        self.label_15.setPixmap(QtGui.QPixmap(":/icon/icon/ai.png"))
+        self.label_15.setScaledContents(True)
+        self.label_15.setObjectName("label_15")
+        self.horizontalLayout_9.addWidget(self.label_15)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_9)
+        self.textEdit_10 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_2)
+        self.textEdit_10.setMinimumSize(QtCore.QSize(0, 53))
+        self.textEdit_10.setStyleSheet("QTextEdit{\n"
+"    background-color:#58534E;\n"
+"}")
+        self.textEdit_10.setObjectName("textEdit_10")
+        self.verticalLayout_4.addWidget(self.textEdit_10)
+        self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
+        self.horizontalLayout_7.addWidget(self.scrollArea_2)
+        self.horizontalLayout_10.addWidget(self.widget_6)
         self.stackedWidget.addWidget(self.page_3)
         self.gridLayout_2.addWidget(self.stackedWidget, 1, 2, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
         self.stackedWidget.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         self.stackedWidget_3.setCurrentIndex(1)
         self.stackedWidget_2.setCurrentIndex(1)
         self.change_btn.toggled['bool'].connect(self.widget_3.setVisible) # type: ignore
@@ -382,16 +593,62 @@ class Ui_MainWindow(object):
         self.pushButton_15.setText(_translate("MainWindow", "Upload"))
         self.btn_rbg.setText(_translate("MainWindow", "Remove BG"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Remove BG"))
-        self.btn_resen.setText(_translate("MainWindow", "Result"))
         self.label_10.setText(_translate("MainWindow", "Enhance Image"))
+        self.btn_uploaden.setText(_translate("MainWindow", "ENHANCE"))
         self.btn_downloaden.setText(_translate("MainWindow", "Download"))
         self.lbl_original.setText(_translate("MainWindow", "RESULT"))
         self.lbl_imgen.setText(_translate("MainWindow", "Image"))
-        self.lbl_imgen_result.setText(_translate("MainWindow", "Image"))
         self.lbl_original_result.setText(_translate("MainWindow", "ORIGINAL"))
+        self.lbl_imgen_result.setText(_translate("MainWindow", "Image"))
         self.btn_origen.setText(_translate("MainWindow", "Original"))
-        self.btn_uploaden.setText(_translate("MainWindow", "UPLOAD"))
+        self.btn_resen.setText(_translate("MainWindow", "Result"))
+        self.pushButton.setText(_translate("MainWindow", "UPLOAD"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Enhance Image"))
         self.label_8.setText(_translate("MainWindow", "Gallery"))
-        self.label_9.setText(_translate("MainWindow", "About Us"))
+        self.textEdit_6.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:72pt; color:#ffffff;\">About Us</span></p></body></html>"))
+        self.textEdit_7.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt;\">Welcome To Vision Perfect!</span></p></body></html>"))
+        self.textEdit_8.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt;\">A user-friendly application developed by a team of computer engineering students from CTU-Main Campus. Our app analyzes your photos and applies adjustments automatically to enhance their quality. From reducing noise to adjusting contrast and brightness, Vision Perfect ensures your images look their best without requiring manual intervention. </span></p></body></html>"))
+        self.textEdit_9.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;\"><br /></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;\"><br /></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; color:#000000;\">In addition to image enhancement, Vision Perfect also offers a background removal feature powered by AI algorithms. This feature allows you to effortlessly isolate subjects from their backgrounds, opening up a world of creative possibilities for your projects.</span></p></body></html>"))
+        self.textEdit_10.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">Email: lindon.matarong@ctu.edu.ph | rhea.paraiso@ctu.edu.ph |  kayealiyah.sermon@ctu.edu.ph<br />Address: M.J. Cuenco Ave, C‎or R. Palma Street, 6000 Cebu</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">Group 7 © 2024</span></p></body></html>"))
 import resource_rc
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

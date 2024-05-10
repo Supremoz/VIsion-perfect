@@ -39,5 +39,7 @@
     <file>icon/Upload to the Cloud.ico</file>
     <file>icon/Upload to the Cloud.png</file>
     <file>icon/Upload to the Cloud_1.ico</file>
+    <file>icon/vp.png</file>
+    <file>icon/ai.png</file>
   </qresource>
 </RCC>
