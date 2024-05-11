@@ -25,6 +25,6 @@ QtWidgets {
 #label_4, #label, #label_7{
     color: white;
 }
-#tabWidget {
+#tabWidget, #lbl_imgen_result, #lbl_imgen, #label_11, #lbl_imgbg_result{
     color: white;
 }

@@ -50,6 +50,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_resen.clicked.connect(self.show_output_enhance)
         self.ui.btn_origen.clicked.connect(self.input_enhance_image)
         self.ui.pushButton.clicked.connect(self.select_enhance_image)
+        self.ui.btn_downloaden.clicked.connect(self.download_enhance_image)
         # Hide btn when the program starts
         self.ui.widget_4.hide()
         self.ui.btn_rbg.hide()
@@ -58,6 +59,10 @@ class MainWindow(QMainWindow):
         self.ui.btn_resultbg.hide()
         self.ui.comboBox.hide()
         self.ui.btn_closebg.hide()
+        self.ui.btn_origen.hide()
+        self.ui.btn_uploaden.hide()
+        self.ui.btn_resen.hide()
+        self.ui.btn_downloaden.hide()
         # Connect exit_btn_1 and exit_btn_2 to close the program
         self.ui.exit_btn_1.clicked.connect(QApplication.instance().quit)
         self.ui.exit_btn_2.clicked.connect(QApplication.instance().quit)
@@ -149,6 +154,10 @@ class MainWindow(QMainWindow):
             self.ui.lbl_imgen_result.setPixmap(pixmap)
             self.ui.lbl_imgen_result.setScaledContents(True)
             self.ui.lbl_imgen_result.adjustSize()
+            self.ui.btn_origen.show()
+            self.ui.btn_uploaden.show()
+            self.ui.btn_resen.show()
+            self.ui.btn_downloaden.show()
             #self.ui.pushButton_15.hide()
             #self.ui.btn_closebg.show()
             #self.ui.btn_rbg.show()
@@ -182,6 +191,7 @@ class MainWindow(QMainWindow):
         runnable.signals.result.connect(self.display_enhanced_image)
         runnable.signals.error.connect(self.display_enhance_error)
         self.threadpool.start(runnable)
+        
 
     def display_enhanced_image(self, result):
         pixmap = QPixmap.fromImage(QImage(result))
@@ -192,6 +202,17 @@ class MainWindow(QMainWindow):
 
     def display_enhance_error(self, error):
         print(f"Enhance Error: {error}")
+
+    def download_enhance_image(self):
+        file_dialog = QFileDialog()
+        file_name, _ = file_dialog.getSaveFileName(self, "Save Image", "result.png", "Image Files (*.png)")
+
+        if file_name:
+            # Convert the output image to a QImage
+            output_image = QImage(self.ui.lbl_imgen.pixmap().toImage())
+
+            # Save the output image
+            output_image.save(file_name)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
