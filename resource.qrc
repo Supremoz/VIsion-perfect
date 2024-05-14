@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icon">
+    <file>icon/Alarm.ico</file>
+    <file>icon/AlarmW.ico</file>
+    <file>giphy-unscreen.gif</file>
     <file>icon/bg_cover.png</file>
     <file>icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</file>
     <file>icon/Close.ico</file>
@@ -39,7 +42,5 @@
     <file>icon/Upload to the Cloud.ico</file>
     <file>icon/Upload to the Cloud.png</file>
     <file>icon/Upload to the Cloud_1.ico</file>
-    <file>icon/vp.png</file>
-    <file>icon/ai.png</file>
   </qresource>
 </RCC>
