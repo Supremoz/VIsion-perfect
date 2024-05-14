@@ -33,7 +33,8 @@ class MainWindow(QMainWindow):
     
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
+        
+        self.is_notif_visible = False
         self.ui.home_btn_1.clicked.connect(self.show_home_page)
         self.ui.home_btn_2.clicked.connect(self.show_home_page)
         self.ui.gallery_btn_1.clicked.connect(self.show_gallery_page)
@@ -51,6 +52,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_origen.clicked.connect(self.input_enhance_image)
         self.ui.pushButton.clicked.connect(self.select_enhance_image)
         self.ui.btn_downloaden.clicked.connect(self.download_enhance_image)
+        self.ui.btn_notif.clicked.connect(self.show_notif)
         # Hide btn when the program starts
         self.ui.widget_4.hide()
         self.ui.btn_rbg.hide()
@@ -63,6 +65,8 @@ class MainWindow(QMainWindow):
         self.ui.btn_uploaden.hide()
         self.ui.btn_resen.hide()
         self.ui.btn_downloaden.hide()
+        self.ui.progressBar.hide()
+        self.ui.lbl_notifMessage.hide()
         # Connect exit_btn_1 and exit_btn_2 to close the program
         self.ui.exit_btn_1.clicked.connect(QApplication.instance().quit)
         self.ui.exit_btn_2.clicked.connect(QApplication.instance().quit)
@@ -97,6 +101,17 @@ class MainWindow(QMainWindow):
         self.ui.btn_downloadbg.hide()
         self.ui.btn_origbg.hide()
         self.ui.btn_resultbg.hide()
+    
+    def show_notif(self):
+
+        if not self.is_notif_visible:
+            self.ui.progressBar.show()
+            self.ui.lbl_notifMessage.show()
+            self.is_notif_visible = True
+        else:
+            self.ui.progressBar.hide()
+            self.ui.lbl_notifMessage.hide()
+            self.is_notif_visible = False
         
     def select_image(self):
         file_dialog = QFileDialog()
