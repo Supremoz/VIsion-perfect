@@ -23,6 +23,7 @@
    <iconset resource="resource.qrc">
     <normaloff>:/icon/icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</normaloff>:/icon/icon/Blue Beige Minimalist Spartan Strong Knight Logo (1).png</iconset>
   </property>
+<<<<<<< HEAD
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_13">
     <item row="0" column="0" colspan="3">
@@ -164,6 +165,31 @@
         </widget>
        </item>
       </layout>
+=======
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #282623;
+}
+
+QPushButton{
+	background-color: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="change_btn">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icon/icon/Menu.ico</normaloff>:/icon/icon/Menu.ico</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
      </widget>
     </item>
     <item row="1" column="0">
@@ -257,6 +283,16 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="3">
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
      </widget>
     </item>
     <item row="1" column="1">
@@ -368,7 +404,15 @@ QPushButton{
              <item row="0" column="1" rowspan="2" colspan="2">
               <widget class="QLabel" name="label_2">
                <property name="styleSheet">
+<<<<<<< HEAD
                 <string notr="true"/>
+=======
+                <string notr="true">
+QLabel {
+    background-color: #58534E;
+	color: white;
+}</string>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                </property>
                <property name="text">
                 <string>Image</string>
@@ -496,6 +540,16 @@ QTableWidget{
                </property>
               </widget>
              </item>
+<<<<<<< HEAD
+=======
+             <item row="2" column="0" colspan="3">
+              <widget class="QTableWidget" name="tableWidget">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+              </widget>
+             </item>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
             </layout>
            </widget>
           </item>
@@ -577,7 +631,15 @@ QComboBox{
                 <item row="0" column="0">
                  <widget class="QLabel" name="lbl_imgbg">
                   <property name="styleSheet">
+<<<<<<< HEAD
                    <string notr="true"/>
+=======
+                   <string notr="true">QLabel{
+    background-color: #58534e;
+	color: white;
+}
+</string>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                   </property>
                   <property name="text">
                    <string/>
@@ -594,7 +656,15 @@ QComboBox{
                    <bool>true</bool>
                   </property>
                   <property name="styleSheet">
+<<<<<<< HEAD
                    <string notr="true"/>
+=======
+                   <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                   </property>
                   <property name="text">
                    <string/>
@@ -617,7 +687,15 @@ QComboBox{
                 <item row="0" column="0">
                  <widget class="QLabel" name="lbl_imgbg_result">
                   <property name="styleSheet">
+<<<<<<< HEAD
                    <string notr="true"/>
+=======
+                   <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                   </property>
                   <property name="text">
                    <string>Image</string>
@@ -816,6 +894,7 @@ QComboBox{
                <number>1</number>
               </property>
               <widget class="QWidget" name="page_4">
+<<<<<<< HEAD
                <layout class="QGridLayout" name="gridLayout_11">
                 <item row="0" column="0">
                  <widget class="QLabel" name="lbl_original">
@@ -871,6 +950,79 @@ QComboBox{
                  </widget>
                 </item>
                </layout>
+=======
+               <widget class="QLabel" name="lbl_original">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>10</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>RESULT</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_imgen">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>30</y>
+                  <width>411</width>
+                  <height>431</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Image</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="page_5">
+               <widget class="QLabel" name="lbl_imgen_result">
+                <property name="geometry">
+                 <rect>
+                  <x>9</x>
+                  <y>31</y>
+                  <width>411</width>
+                  <height>431</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel{
+    background-color: #58534E;
+	color: white;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Image</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="lbl_original_result">
+                <property name="geometry">
+                 <rect>
+                  <x>9</x>
+                  <y>11</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>ORIGINAL</string>
+                </property>
+                <property name="indent">
+                 <number>1</number>
+                </property>
+               </widget>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
               </widget>
              </widget>
             </item>
@@ -1062,9 +1214,15 @@ QComboBox{
               <property name="geometry">
                <rect>
                 <x>0</x>
+<<<<<<< HEAD
                 <y>0</y>
                 <width>874</width>
                 <height>1155</height>
+=======
+                <y>-30</y>
+                <width>870</width>
+                <height>1151</height>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                </rect>
               </property>
               <property name="styleSheet">
@@ -1094,7 +1252,11 @@ QComboBox{
                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+<<<<<<< HEAD
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+=======
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:72pt; color:#ffffff;&quot;&gt;About Us&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
@@ -1126,7 +1288,11 @@ p, li { white-space: pre-wrap; }
                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+<<<<<<< HEAD
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+=======
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Welcome To Vision Perfect!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                 </widget>
@@ -1166,6 +1332,7 @@ p, li { white-space: pre-wrap; }
                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+<<<<<<< HEAD
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1173,6 +1340,15 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+=======
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;A user-friendly application developed by a team of computer engineering students from CTU-Main Campus. Our app analyzes your photos and applies adjustments automatically to enhance their quality. From reducing noise to adjusting contrast and brightness, Vision Perfect ensures your images look their best without requiring manual intervention. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
@@ -1201,7 +1377,11 @@ p, li { white-space: pre-wrap; }
                     <string/>
                    </property>
                    <property name="pixmap">
+<<<<<<< HEAD
                     <pixmap resource="../../VIsion-perfect/resource.qrc">:/icon/icon/vp.png</pixmap>
+=======
+                    <pixmap resource="resource.qrc">:/icon/icon/vp.png</pixmap>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -1255,8 +1435,13 @@ p, li { white-space: pre-wrap; }
                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+<<<<<<< HEAD
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+=======
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; color:#000000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -1288,7 +1473,11 @@ p, li { white-space: pre-wrap; }
                     <string/>
                    </property>
                    <property name="pixmap">
+<<<<<<< HEAD
                     <pixmap resource="../../VIsion-perfect/resource.qrc">:/icon/icon/ai.png</pixmap>
+=======
+                    <pixmap resource="resource.qrc">:/icon/icon/ai.png</pixmap>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -1314,7 +1503,11 @@ p, li { white-space: pre-wrap; }
                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
+<<<<<<< HEAD
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
+=======
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;Email: lindon.matarong@ctu.edu.ph | rhea.paraiso@ctu.edu.ph |  kayealiyah.sermon@ctu.edu.ph&lt;br /&gt;Address: M.J. Cuenco Ave, C‎or R. Palma Street, 6000 Cebu&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;Group 7 © 2024&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
@@ -1336,7 +1529,11 @@ p, li { white-space: pre-wrap; }
  </widget>
  <resources>
   <include location="resource.qrc"/>
+<<<<<<< HEAD
   <include location="../../VIsion-perfect/resource.qrc"/>
+=======
+  <include location="../../Vision-Perfect/VIsion-perfect/resource.qrc"/>
+>>>>>>> 6fcf4f4a853aae1297dfb14026f19b42ae186824
  </resources>
  <connections>
   <connection>
